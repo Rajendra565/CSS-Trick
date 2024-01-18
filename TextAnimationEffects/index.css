@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display:grid;
+    place-items: center;
+}
+h1{
+    /* color: aliceblue; */
+    font-size: 50px;
+    font-weight: 900;
+    width: 50%;
+    text-transform: capitalize;
+    background: linear-gradient(to right,red,blue);
+    color: transparent;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 100px rgba(21, 0, 255, 0.73);
+    animation: anim 1s infinite alternate;
+}
+
+@keyframes anim {
+    100%{
+        text-shadow: 0 0 60px rgba(255, 72, 0, 0.677);
+      
+    }
+}
