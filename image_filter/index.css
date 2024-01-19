@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: top;
+    
+}
+.image-card{
+    display: flex ;
+    /* flex-wrap: wrap; */
+    margin: 20px 50px;
+    justify-content: center;
+    align-items: start;
+    
+
+
+}
+.card{
+    text-align: center;
+    width: fit-content;
+    
+    
+}
+h1{
+    font-size: 20px;
+}
+img{
+    width: 80%;
+}
+.card1 img{
+    filter: blur(5px);
+}
+.card2 img{
+    filter:brightness(1.5);
+}
+.card3 img{
+    filter:contrast(10);
+}
+.card4 img{
+    filter:grayscale(50%);
+}
+
+.card5 img{
+    filter: hue-rotate(0deg);
+}
+.card6 img{
+    filter:drop-shadow(16px 12px 20px rgb(0, 255, 30));
+}
+.card7 img{
+    filter: opacity(60%);
+}
