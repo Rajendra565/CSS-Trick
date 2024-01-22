@@ -12,7 +12,7 @@ body{
     align-items: center;
     gap: 10%;
     justify-content: center;
-    perspective: 200px;
+    perspective: 10px;
     overflow-x: hidden;
 }
 .card{
