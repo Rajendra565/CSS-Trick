@@ -12,11 +12,14 @@ body{
 .btn{
     padding: 12px 20px;
     border: none;
-    background: lightseagreen;
+    background: 
+    lightseagreen;
+    letter-spacing: 2px;
     color: #fff;
     font-size:18px ;
     font-weight: 700;
     transition: all 1s ease;
+    text-transform: capitalize;
     
 }
 .btn:hover{
