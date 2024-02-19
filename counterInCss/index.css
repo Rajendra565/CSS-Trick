@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    counter-reset: mycounter;
+}
+h1::before{
+    content: counter( mycounter);
+    counter-increment: mycounter;
+}

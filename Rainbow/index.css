@@ -16,13 +16,20 @@ body{
 
     border-radius: 50%;
     animation: golgol 12s ease infinite ;
+    transform-origin: center;
 }
 
 @keyframes golgol {
     0%{
         rotate: 0deg;
+        /* transform: translate(99px, 59px); */ 
+
+
+
+
     }
     100%{
         rotate: 360deg;
+        /* transform: translate(100px, 60px); */
     }
 }
