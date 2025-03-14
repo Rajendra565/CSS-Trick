@@ -1,0 +1,304 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 50px;
+  background: linear-gradient(to right,red,blue);
+  color: transparent;
+  -webkit-background-clip: text;
+  text-shadow: 0 0 100px rgba(21, 0, 255, 0.73);
+    animation: anim 1s infinite alternate;
+}
+
+@keyframes anim {
+    100%{       
+        text-shadow: 0 0 80px rgba(228, 79, 79, 0.937);
+      
+    }
+}
+
+body{
+  padding: 100px;
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  flex-direction: column;
+  /* position: relative; */
+}
+.hero{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.dark{
+  background: #000;
+  
+}
+.button-div{
+  padding: 80px;
+  border-radius: 10px;
+  background-color: black;
+  border-radius: 50px;
+background: #30303034;
+box-shadow:  5px 5px 10px #bebebe74,
+             -5px -5px 10px #ffffff97;
+}
+.button-div-dark{
+  padding: 100px;
+  border-radius: 10px;
+  background-color: black;
+  border-radius: 50px;
+background: #303030;
+box-shadow:  10px 10px 20px #3a3a3a74,
+             -10px -10px 20px #3d3d3d97;
+}
+.btn{
+  cursor: pointer;
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 2px 2px 6px #c5c5c5,
+              -2px -2px 6px #ffffff;
+
+}
+
+/* button 2 Start */
+
+
+.btn2::before {
+  content: '';
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #d6ccc197 0%, #6b6a6ae6 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ .btn2:hover::before {
+  width: 9em;
+ }
+/* button 2 Ended */
+ 
+/* button3 Start */
+
+.btn3::before {
+  content: '';
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-image: linear-gradient(to right, #d6ccc197 0%, #6b6a6ae6 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ .btn3:hover::before {
+  height: 100%;
+ }
+ /* button3 Ended */
+
+ /* Button 4 Started */
+ .btn4::before{
+   content: '';
+   width: 0;
+   height: 3em;
+   border-radius: 30em;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 0;
+   background-image: linear-gradient(to right, #c57e3297 0%, #6b6a6ae6 100%);
+   transition: .5s ease;
+   display: block;
+   z-index: -1;
+  }
+  .btn4:hover {
+    transform: scale(1.05);
+    border-color: rgba(203, 46, 46, 0.6);
+  }
+  
+  .btn4:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .btn4::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(245, 245, 245, 0) 30%,
+      rgba(97, 96, 96, 0.8),
+      rgba(188, 185, 185, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+  
+  60% {
+    left: 100%;
+  }
+  
+  100%{
+    left: 100%;
+  }
+}
+/* Button 4 End */
+
+/* button 5  */
+
+.btn5 {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.6em 2em;
+  /* border: rgb(116, 118, 117) solid 0.15em; */
+  background-color: #fff;
+  border-radius: 0.25em;
+  color: #000;
+ /* border-radius: 30em; */
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  /* user-select: none; */
+
+  box-shadow: 2px 2px 6px #c5c5c5,
+              -2px -2px 6px #ffffff;
+}
+
+ .btn5  {
+  z-index: 1;
+} 
+
+.btn5:hover {
+  color: #212121;
+}
+
+.btn5:active {
+  border-color: rgb(120, 122, 122);
+}
+
+.btn5::after, .btn5::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: rgb(107, 107, 107);
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+  z-index: -1;
+}
+
+.btn5::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.btn5::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.btn5:hover:before {
+  transform: translateX(-1em);
+}
+
+.btn5:hover:after {
+  transform: translateX(1em);
+}
+
+.btn5:active:before,
+.btn5:hover:before:active:after {
+  background: teal;
+}
+/* button 5 end */
+
+/* button 6 Start  */
+.button3d{
+  
+  perspective: 1000px;
+  padding: 1em 1em;
+  background: linear-gradient(#929292, #868a863f);
+  border: none;
+  outline: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+  text-shadow: 0 10px 10px #000;
+  /* border-radius: 30px; */
+  cursor: pointer;
+  transform: rotateX(70deg) rotateZ(30deg);
+  transform-style: preserve-3d;
+  transition: transform 0.9s;
+}
+
+.button3d::before {
+  content: "";
+  width: 100%;
+  height: 15px;
+  background-color: #868a863f;;
+  position: absolute;
+  /* border-radius: 10px; */
+  bottom: 0;
+  right: 0;
+  transform: rotateX(90deg);
+  transform-origin: bottom;
+}
+
+.button3d::after {
+  content: "";
+  width: 15px;
+  height: 100%;
+  background-color: #929292;
+  position: absolute;
+  /* border-radius: 10px; */
+  top: 0;
+  right: 0;
+  transform: rotateY(-90deg);
+  transform-origin: right;
+}
+
+.button3d:hover {
+  transform: rotateX(30deg) rotateZ(0);
+}
+
+/* button 6 End  */
